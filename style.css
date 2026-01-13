@@ -59,22 +59,31 @@ h1 {
     justify-content: center;
     width: 1170px;
     height: 67px;
-    padding: 50px;
+    margin-top: 210px;
+    margin-bottom: 20px;
 }
 
 .img_preview {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     width: 1170px;
-    height: 348px;
-    padding: 50px;
+    height: 174px;
+    padding-top: 50px;
 }
 
+
+.img_gallery{
+    padding-left: 10px;
+    width: 150px;
+    height: 150px;
+
+}
 
 footer {
     background-color: #06171E;
     display: flex;
+    align-items: center;
     justify-content: center;
     background-image: url(./img/background_footer.png);
     background-size: cover;
