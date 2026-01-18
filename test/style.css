@@ -1,0 +1,48 @@
+
+.img_gallery img {
+cursor: pointer;
+padding-left: 5px;
+    padding-right: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 25px ;
+    border: 20px;
+}
+
+#lightbox {
+display: none;
+position: fixed;
+z-index: 1000;
+inset: 0;
+background: rgba(0,0,0,0.9);
+justify-content: center;
+align-items: center;
+}
+
+#lightbox img {
+max-width: 80%;
+max-height: 80%;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 30px;
+font-size: 30px;
+color: white;
+cursor: pointer;
+}
+
+.prev, .next {
+position: absolute;
+top: 50%;
+font-size: 40px;
+background: none;
+border: none;
+color: white;
+cursor: pointer;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
