@@ -96,23 +96,23 @@ padding-left: 5px;
 #lightbox {
 display: none;
 position: fixed;
-z-index: 1000;
+z-index: 100;
 inset: 0;
-background: #06171E;
 justify-content: center;
 align-items: center;
 }
 
 #lightbox img {
-max-width: 80%;
-max-height: 80%;
+max-width: 95%;
+max-height: 95%;
 }
 
 .close {
 position: absolute;
 top: 20px;
 right: 30px;
-font-size: 40px;
+width: 45px;
+height: 45px;
 color: white;
 cursor: pointer;
 }
@@ -120,7 +120,8 @@ cursor: pointer;
 .prev, .next {
 position: absolute;
 top: 50%;
-font-size: 50px;
+width: 55px;
+height: 55px;
 background: none;
 border: none;
 color: white;
