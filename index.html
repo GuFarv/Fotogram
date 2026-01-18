@@ -13,7 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css" />
-    <script src="./imgview.js"></script>
+
 
 
 
@@ -33,41 +33,56 @@
                 <div class="img_headline">
                     <h1>Your personal photo album</h1>
                 </div>
-                <div class="img_preview">
-                    <img class="img_gallery" src="./img/gallery/1_img.jpeg" alt="personal img"
-                        onclick="openLightbox(0)">
-                    <img class="img_gallery" src="./img/gallery/2_img.jpeg" alt="personal img"
-                        onclick="openLightbox(1)">
-                    <img class="img_gallery" src="./img/gallery/3_img.jpeg" alt="personal img"
-                        onclick="openLightbox(2)">
-                    <img class="img_gallery" src="./img/gallery/4_img.jpeg" alt="personal img"
-                        onclick="openLightbox(3)">
-                    <img class="img_gallery" src="./img/gallery/5_img.jpeg" alt="personal img"
-                        onclick="openLightbox(4)">
-                    <img class="img_gallery" src="./img/gallery/6_img.jpeg" alt="personal img"
-                        onclick="openLightbox(5)">
-                    <img class="img_gallery" src="./img/gallery/7_img.jpeg" alt="personal img"
-                        onclick="openLightbox(6)">
+                <div>
+                    <br><br>
+                    <div class="upload">
+                        <input class="uploadbtn" type="file" multiple accept="image/*" id="files">
+                        <button class="deletebtn" onclick=img_delete()>Speicher löschen</button>
+                        <br>
+                        <div class="spacer"></div>
+                        <br>
+                    </div>
+                    <div class="img_preview" id="thumbs">
+                        <img class="img_gallery" src="./img/gallery/1_img.jpeg" alt="personal img"
+                            onclick="openLightbox(0)">
+                        <img class="img_gallery" src="./img/gallery/2_img.jpeg" alt="personal img"
+                            onclick="openLightbox(1)">
+                        <img class="img_gallery" src="./img/gallery/3_img.jpeg" alt="personal img"
+                            onclick="openLightbox(2)">
+                        <img class="img_gallery" src="./img/gallery/4_img.jpeg" alt="personal img"
+                            onclick="openLightbox(3)">
+                        <img class="img_gallery" src="./img/gallery/5_img.jpeg" alt="personal img"
+                            onclick="openLightbox(4)">
+                        <img class="img_gallery" src="./img/gallery/6_img.jpeg" alt="personal img"
+                            onclick="openLightbox(5)">
+                        <img class="img_gallery" src="./img/gallery/7_img.jpeg" alt="personal img"
+                            onclick="openLightbox(6)">
+                        <img class="img_gallery" src="./img/gallery/8_img.jpeg" alt="personal img"
+                            onclick="openLightbox(7)">
+                        <img class="img_gallery" src="./img/gallery/9_img.jpeg" alt="personal img"
+                            onclick="openLightbox(8)">
+                        <img class="img_gallery" src="./img/gallery/10_img.jpeg" alt="personal img"
+                            onclick="openLightbox(9)">
+                        <img class="img_gallery" src="./img/gallery/11_img.jpeg" alt="personal img"
+                            onclick="openLightbox(10)">
+                        <img class="img_gallery" src="./img/gallery/12_img.jpeg" alt="personal img"
+                            onclick="openLightbox(11)">
+
+                    </div>
+
+
+                    <div id="lightbox">
+                        <span class="close" onclick="closeLightbox()"><img src="./img/close_1.png"
+                                alt="close button"></span>
+                        <button class="prev" onclick="changeImage(-1)"><img src="./img/arrow_left_1.png"
+                                alt="left button"></button>
+                        <img id="lightbox-img">
+                        <button class="next" onclick="changeImage(1)"><img src="./img/arrow_right_1.png"
+                                alt="right button"></button>
+                    </div>
                 </div>
-                <div class="img_preview">
-                    <img class="img_gallery" src="./img/gallery/8_img.jpeg" alt="personal img"
-                        onclick="openLightbox(7)">
-                    <img class="img_gallery" src="./img/gallery/9_img.jpeg" alt="personal img"
-                        onclick="openLightbox(8)">
-                    <img class="img_gallery" src="./img/gallery/10_img.jpeg" alt="personal img"
-                        onclick="openLightbox(9)">
-                    <img class="img_gallery" src="./img/gallery/11_img.jpeg" alt="personal img"
-                        onclick="openLightbox(10)">
-                    <img class="img_gallery" src="./img/gallery/12_img.jpeg" alt="personal img"
-                        onclick="openLightbox(11)">
-                </div>
-                <div id="lightbox">
-                    <span class="close" onclick="closeLightbox()"><img src="./img/close_1.png" alt="close button"></span>
-                    <button class="prev" onclick="changeImage(-1)"><img src="./img/arrow_left_1.png" alt="left button"></button>
-                    <img id="lightbox-img">
-                    <button class="next" onclick="changeImage(1)"><img src="./img/arrow_right_1.png" alt="right button"></button>
-                </div>
-            </div>
+
+
 
         </section>
     </main>
@@ -82,5 +97,6 @@
     </footer>
 
 </body>
+<script src="./imgview.js"></script>
 
 </html>
