@@ -1,0 +1,274 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #222;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.wrapper_container {
+    max-width: 1440px;
+    width: 100%;
+
+}
+
+header {
+    background-color: #09212A;
+    display: flex;
+    justify-content: center;
+}
+
+.header_layout {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 167px;
+    align-items: center;
+    height: 144px;
+}
+
+.header_layout img {
+    width: 215px;
+    height: 41px;
+}
+
+main {
+    flex: 1;
+    background-color: #06171E;
+
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Figtree", sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700 bold;
+    font-family: "Figtree", sans-serif;
+    color: #FFFFFF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#photo_content {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 0 160px;
+}
+
+.GalleryImage {
+    height: 150px;
+    width: 150px;
+    border-radius: 16px;
+    border: solid 2px #124658;
+    margin: 0 8px 48px 8px;
+    object-fit: cover;
+}
+
+.GalleryImage:hover {
+    filter: brightness(1.6);
+    transform: scale(1.05);
+}
+
+#img_dialog {
+    background-color: #09212A;
+    border-radius: 40px;
+    border: 2px solid #b3b5b5;
+}
+
+#dialog_background {
+    padding: 56px 64px;
+}
+
+#img_dialog.opened {
+    transition: all 1.5s ease-in;
+    transform: scale(1.1);
+}
+
+#img_dialog::backdrop {
+    opacity: 0;
+    transition: all 2s ease-in;
+    background-color: black;
+}
+
+#img_dialog.opened::backdrop {
+    opacity: 0.8;
+    transition: all 2s ease-in;
+}
+
+#dialog_title {
+    font-size: 24px;
+    font-weight: 600 bold;
+}
+
+.DialogExit:hover {
+    background-image: url(./img/exit_hover.png);
+    cursor: pointer;
+}
+
+.DialogHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.DialogNav {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.DialogNav img:hover {
+    filter: brightness(1.6);
+    cursor: pointer;
+}
+
+#show_index {
+    align-content: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#big_picture img {
+    max-height: 400px;
+}
+
+footer {
+    background-color: #06171E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./icons/background_footer.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.footer_layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 144px;
+}
+
+@media (max-width: 1182px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    #photo_content {
+        padding: 16 16px;
+    }
+
+    #big_picture img {
+        max-width: 400px;
+
+    }
+
+    #img_dialog.opened {
+        transition: all 1.5s ease-in;
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 1020px) {
+    #dialog_background {
+        padding: 16px 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #photo_content {
+        padding: 0 24px;
+    }
+
+    #dialog_title {
+        font-size: 16px;
+        font-weight: 400 bold;
+    }
+
+    .header_layout img {
+        width: 180px;
+    }
+
+    .header_layout {
+        padding-left: 50px;
+    }
+
+
+
+}
+
+@media (max-width: 740px) {
+    h1 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+
+}
+
+@media (max-width: 570px) {
+
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    #big_picture img {
+        max-width: 300px;
+
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    #big_picture img {
+        max-width: 200px;
+
+    }
+
+    #dialog_background {
+        padding: 8px 8px;
+    }
+
+    #dialog_title {
+        font-size: 12px;
+        font-weight: 200 bold;
+    }
+
+    .DialogHeader {
+        display: flex;
+        justify-content: center;
+    }
+
+    .DialogNav {
+        align-items: center;
+        width: 200px;
+        margin: auto;
+    }
+
+}

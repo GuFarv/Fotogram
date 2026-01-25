@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/logo_small.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper_container">
+            <div class="header_layout">
+                <a href="./index.html"><img src="./icons/logo_fotogram.png" class="header_logo" /></a>
+
+    </header>
+
+    <body onload="pushImageWidgets()" id="hide_scrollbar">
+
+        <main>
+            <div class="MainContentWrapper">
+                <h1>Your personal photo album</h1>
+                <section id="photo_content"></section>
+            </div>
+
+
+            <dialog id="img_dialog" aria-labelledby="dialog_title" aria-describedby="big_picture">
+                <div id="dialog_background">
+
+                    <header class="DialogHeader">
+                        <h2 id="dialog_title"></h2>
+                        <img src="./icons/close.png" class="DialogExit" onclick="closeDialog()" tabindex="0"
+                            onkeydown="tabindexCloseDialog(event)" aria-label="Dialog schließen">
+                    </header>
+
+                    <section>
+                        <div id="big_picture"></div>
+                    </section>
+
+                    <footer class="DialogNav">
+                        <img src="./icons/previous.png" onclick="navBack()" onkeydown="navLeft()"
+                            aria-label="Zurück Navigation">
+                        <p id="show_index"></p>
+                        <img src="./icons/next.png" onclick="navForward()" onkeydown="navRight()"
+                            aria-label="Vorwärts Navigation">
+                    </footer>
+
+                </div>
+            </dialog>
+
+        </main>
+
+        <footer>
+            <div class="wrapper_container">
+                <div class="footer_layout">
+                    <img src="./icons/logo_dev_aka.png" class="footer_logo" />
+
+                </div>
+            </div>
+        </footer>
+
+    </body>
+    <script src="./imgview.js"></script>
+
+</html>
