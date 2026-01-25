@@ -1,16 +1,16 @@
 let images = [
-    'mountainview_1.jpeg',
-    'mountainview_2.jpeg',
-    'mountainview_3.jpeg',
-    'mountainview_4.jpeg',
-    'mountainview_5.jpeg',
-    'mountainview_6.jpeg',
-    'mountainview_7.jpeg',
-    'mountainview_8.jpeg',
-    'mountainview_9.jpeg',
-    'mountainview_10.jpeg',
-    'mountainview_11.jpeg',
-    'mountainview_12.jpeg',
+    'mountainview_1.jpg',
+    'mountainview_2.jpg',
+    'mountainview_3.jpg',
+    'mountainview_4.jpg',
+    'mountainview_5.jpg',
+    'mountainview_6.jpg',
+    'mountainview_7.jpg',
+    'mountainview_8.jpg',
+    'mountainview_9.jpg',
+    'mountainview_10.jpg',
+    'mountainview_11.jpg',
+    'mountainview_12.jpg',
 ]
 
 let currentIndex = 0;
