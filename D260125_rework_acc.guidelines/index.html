@@ -23,7 +23,7 @@
     <header>
         <div class="wrapper_container">
             <div class="header_layout">
-                <a href="./index.html"><img src="./icons/logo_fotogram.png" class="header_logo" /></a>
+                <a href="./index.html"><img src="./icons/logo_fotogram.png" aria-label="Seitenlogo" class="header_logo"/></a>
 
     </header>
 
@@ -50,10 +50,10 @@
                     </section>
 
                     <footer class="DialogNav">
-                        <img src="./icons/previous.png" onclick="navBack()" onkeydown="navLeft()"
+                        <img src="./icons/previous.png" onclick="navBack()" tabindex="0" onkeydown="navLeft()"
                             aria-label="Zurück Navigation">
                         <p id="show_index"></p>
-                        <img src="./icons/next.png" onclick="navForward()" onkeydown="navRight()"
+                        <img src="./icons/next.png" onclick="navForward()" tabindex="0" onkeydown="navRight()"
                             aria-label="Vorwärts Navigation">
                     </footer>
 
@@ -65,13 +65,13 @@
         <footer>
             <div class="wrapper_container">
                 <div class="footer_layout">
-                    <a href="https://developerakademie.com/" target="_blank"><img src="./icons/logo_dev_aka.png" class="header_logo" /></a>
+                    <a href="https://developerakademie.com/" target="_blank"><img src="./icons/logo_dev_aka.png" aria-label="Logo Developerakademie" class="header_logo"/></a>
 
                 </div>
             </div>
         </footer>
 
     </body>
-    <script src="./imgview.js"></script>
+    <script src="./script.js"></script>
 
 </html>

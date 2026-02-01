@@ -13,9 +13,14 @@ let images = [
     'mountainview_12.jpg',
 ]
 
+// referencing of elements
+const dialog = document.getElementById('img_dialog');
+const background = document.getElementById('dialog_background');
+
 let currentIndex = 0;
 
-// Pushen der Bilder von Tabelle zu Gallerie
+
+// Push img from array to gallery
 function pushImageWidgets() {
 
     const PHOTO_CONTAINER = document.getElementById("photo_content");
@@ -27,37 +32,43 @@ function pushImageWidgets() {
 }
 
 
-// Öffnen und Schließen der Gallerie
+// opening and closing of gallery
+function toggleDialog(open, index = null) {
+    const DIALOG_REF = document.getElementById("img_dialog");
+    const BODY_OVERFLOW = document.getElementById("hide_scrollbar");
+
+    if (open) {
+        currentIndex = index;
+        DIALOG_REF.showModal();
+        DIALOG_REF.classList.add("opened");
+        BODY_OVERFLOW.classList.add("HideScrollbar");
+        updateDialog();
+    } else {
+        DIALOG_REF.close();
+        DIALOG_REF.classList.remove("opened");
+        BODY_OVERFLOW.classList.remove("HideScrollbar");
+    }
+}
+
+// open
 function openDialog(index) {
-    currentIndex = index;
-
-    const DIALOG_REF = document.getElementById("img_dialog");
-    DIALOG_REF.showModal();
-    DIALOG_REF.classList.add("opened");
-
-    const BODY_OVERFLOW = document.getElementById("hide_scrollbar");
-    BODY_OVERFLOW.classList.add("HideScrollbar");
-
-    updateDialog();
+    toggleDialog(true, index);
 }
 
+// close
 function closeDialog() {
-    const DIALOG_REF = document.getElementById("img_dialog");
-    DIALOG_REF.close();
-    DIALOG_REF.classList.remove("opened");
-
-    const BODY_OVERFLOW = document.getElementById("hide_scrollbar");
-    BODY_OVERFLOW.classList.remove("HideScrollbar");
+    toggleDialog(false);
 }
 
-// Indexaktualisierung für Navigation
+
+// Index update for navigation
 function updateDialog() {
     pushDialogHeadline(currentIndex);
     pushDialogImage(currentIndex);
     showIndex(currentIndex);
 }
 
-// Push Inhalt von "Dialog"
+// Push content of "Dialog"
 function pushDialogHeadline(index) {
     const HEADLINE_CONTAINER = document.getElementById("dialog_title");
     HEADLINE_CONTAINER.innerHTML = images[index].toUpperCase();
@@ -73,7 +84,7 @@ function showIndex(index) {
     showIndex.innerHTML = `${[index + 1]}/${images.length}`;
 }
 
-// Funktionen von "Dialog Navigation"
+// Function "Dialog Navigation"
 function navBack() {
     currentIndex--;
 
@@ -94,11 +105,8 @@ function navForward() {
     updateDialog();
 }
 
-// Referenzierungen auf Elemente
-const dialog = document.getElementById('img_dialog');
-const background = document.getElementById('dialog_background');
 
-// Klicken auf Hintergrund schließt "Dialog"
+// click onto boackgraund closes "Dialog"
 dialog.onclick = function () {
     closeDialog();
 };
@@ -136,3 +144,19 @@ document.addEventListener("keydown", function (event) {
 
     }
 });
+
+//tab functionality WCAG
+
+const tabElement = document.getElementById("img_dialog");
+
+tabElement.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    navForward();
+    navBack();
+    closeDialog()
+  }
+});
+
+
+
